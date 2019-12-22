@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.veccode.design.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/Tobookmark"
+            app:destination="@id/nav_bookmark" />
+        <action
+            android:id="@+id/ToSlide"
+            app:destination="@id/nav_mcq" />
+        <action
+            android:id="@+id/ToSend"
+            app:destination="@id/nav_send" />
+        <action
+            android:id="@+id/ToShare"
+            app:destination="@id/nav_share" />
+        <action
+            android:id="@+id/ToProfile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/to_webFragment"
+            app:destination="@id/webFragment" />
+
+        <action
+            android:id="@+id/TOCodezone"
+            app:destination="@id/nav_codezone" />
+        <action
+            android:id="@+id/to_adExplainFragment"
+            app:destination="@id/adExplainFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_playFragment"
+            app:destination="@id/playFragment" />
+
+    </fragment>
+
+
+
+
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.veccode.design.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_mcq"
+        android:name="com.example.veccode.design.ui.mcq.McqFragment"
+        android:label="Mcq"
+        tools:layout="@layout/fragment_mcq" >
+        <action
+            android:id="@+id/to_mainMcqFragment"
+            app:destination="@id/mainMcqFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_bookmark"
+        android:name="com.example.veccode.design.ui.bookmark.BookMarkFragment"
+        android:label="Bookmark"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_nav_bookmark_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.veccode.design.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" >
+        <action
+            android:id="@+id/action_nav_share_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.example.veccode.design.ui.send.SendFragment"
+        android:label="About us"
+        tools:layout="@layout/fragment_send" >
+        <action
+            android:id="@+id/action_nav_send_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.example.veccode.design.WebFragment"
+        android:label="fragment_web"
+        tools:layout="@layout/fragment_web" >
+        <action
+            android:id="@+id/action_webFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMcqFragment"
+        android:name="com.example.veccode.design.Mcq.MainMcqFragment"
+        android:label="Mcq"
+        tools:layout="@layout/main_mcq_fragment" >
+        <action
+            android:id="@+id/action_mainMcqFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_codezone"
+        android:name="com.example.veccode.design.BottomNav.codezone.CodeZoneFragment"
+        android:label="Code-Fun"
+        tools:layout="@layout/fragment_code_zone" >
+        <action
+            android:id="@+id/action_nav_codezone_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adExplainFragment"
+        android:name="com.example.veccode.design.AdExplainFragment"
+        android:label="fragment_ad_explain"
+        tools:layout="@layout/fragment_ad_explain" >
+        <action
+            android:id="@+id/action_adExplainFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.example.veccode.design.BottomNav.Play.PlayFragment"
+        android:label="play_fragment"
+        tools:layout="@layout/play_fragment" >
+        <action
+            android:id="@+id/action_playFragment_to_anagramFragment"
+            app:destination="@id/anagramFragment" />
+        <action
+            android:id="@+id/action_playFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anagramFragment"
+        android:name="com.example.veccode.design.Game.AnagramFragment"
+        android:label="anagram_fragment"
+        tools:layout="@layout/anagram_fragment" >
+        <action
+            android:id="@+id/action_anagramFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noInternetFragment"
+        android:name="com.example.veccode.design.NoInternetFragment"
+        android:label="fragment_no_internet"
+        tools:layout="@layout/fragment_no_internet" />
+</navigation>

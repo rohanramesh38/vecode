@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/arc"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+android:background="@drawable/rectangle2"
+            android:layout_height="60dp"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imgprof"
+            android:layout_below="@+id/arc"
+app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/programmer" />
+
+
+
+        <TextView
+            android:id="@+id/nameprof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgprof"
+            android:layout_margin="10dp"
+            android:gravity="center"
+
+            android:text="Rohan"
+            android:textColor="#666"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:id="@+id/line11"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+android:layout_below="@+id/nameprof"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:weightSum="2"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:background="@drawable/whitebadge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+android:elevation="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/silvermedal"
+                    />
+
+                <TextView
+                    android:id="@+id/tvprofsilver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:background="@drawable/whitebadge"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:padding="5dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/goldmedal"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/tvprofgold"
+
+                    android:layout_marginBottom="5dp"
+                    android:text="0"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:background="@drawable/whitebadge"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+android:elevation="10dp"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:src="@drawable/bronzemedal"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/tvprofbronze"
+
+                    android:text="0"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile Details"
+        android:textSize="19.3sp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#373737"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:background="#0000"
+                android:gravity="left"
+                android:maxLength="12"
+                android:fontFamily="@font/maven_pro_regular"
+
+                android:padding="16dp"
+                android:text="Reg number"
+                android:textColor="#181737"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/regnumprof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:background="#0000"
+                android:gravity="left"
+                android:text="11321704100"
+                android:padding="16dp"
+                android:textColor="#373737"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:background="#0000"
+                android:gravity="left"
+                android:maxLength="12"
+                android:fontFamily="@font/maven_pro_regular"
+
+                android:padding="16dp"
+                android:text="Dept"
+                android:textColor="#181737"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/deptprof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:background="#0000"
+                android:text="CSE"
+                android:gravity="left"
+                android:padding="16dp"
+                android:textColor="#373737"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:background="#0000"
+                android:gravity="left"
+                android:maxLength="12"
+                android:fontFamily="@font/maven_pro_regular"
+
+                android:padding="16dp"
+                android:text="DOB"
+                android:textColor="#181737"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:background="#0000"
+                android:gravity="left"
+                android:id="@+id/dobprof"
+                android:text="4/12/1999"
+                android:padding="16dp"
+                android:textColor="#373737"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kanguage's Known"
+            android:textSize="19.3sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#373737"/>
+        <LinearLayout
+            android:elevation="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recpgm"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.8"
+                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                android:tint="@color/colorPrimary" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analytics"
+            android:textSize="19.3sp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#373737"/>
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_width="match_parent"
+            android:id="@+id/charts"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="200dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <item android:id="@+id/nav_codezone"
+        android:title="Feed"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:iconTint="#fff"
+        android:icon="@drawable/motivational"/>
+    <item android:id="@+id/nav_home"
+        android:title="Home"
+        app:showAsAction="always"
+        android:orderInCategory="3"
+        android:iconTint="#fff"
+        android:icon="@drawable/icons8dot"/>
+
+    <item android:id="@+id/playFragment"
+        android:title="Play"
+        app:showAsAction="always"
+        android:orderInCategory="4"
+        android:iconTint="#fff"
+        android:icon="@drawable/icons8a"/>
+
+
+
+</menu>

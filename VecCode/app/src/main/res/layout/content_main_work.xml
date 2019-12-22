@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main_work">
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:defaultNavHost="true"
+android:layout_above="@+id/bttm_nav"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bttm_nav"
+        android:background="@drawable/whitebadge"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="45dp"
+        app:menu="@menu/bottom_menu_nav"
+        tools:ignore="MissingConstraints"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:tilt="20"
+                    android:outlineSpotShadowColor="#b3b3b3"
+                    app:auto_start="true"
+                    app:duration="1500"
+                    android:orientation="vertical"
+                  >
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="169dp"
+                    android:elevation="5dp"
+
+                    android:layout_marginTop="5dp"
+                    android:padding="3dp"
+                    android:outlineAmbientShadowColor="#bbbbbb"
+                    android:background="@drawable/whitebadge"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.viewpager.widget.ViewPager>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:elevation="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewPager"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+
+                    app:tabIndicatorHeight="0dp"></com.google.android.material.tabs.TabLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12.3dp"
+                android:layout_marginTop="10.7dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Enhance Yourself"
+                    android:textSize="19.3sp"
+                    android:textColor="#373737"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See all"
+                    android:visibility="invisible"
+                    android:id="@+id/t1"
+                    android:textColor="#a5a5a5"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/recyclerView"
+                    android:clipToPadding="false"
+                    android:paddingLeft="10.3dp"
+                    android:paddingTop="5.7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:shimmer_demo_duration="1000"
+
+                    android:dividerHeight="0dp"
+                    android:divider="#fff"
+                    app:shimmer_demo_child_count="10"
+                    app:shimmer_demo_layout="@layout/recyclerview_items"
+                    app:shimmer_demo_layout_manager_type="linear_horizontal"
+                    app:shimmer_demo_angle="20"
+                    android:scrollbars="none" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12.3dp"
+                android:layout_marginTop="10.7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Top Skills "
+
+                    android:textSize="19.3sp"
+                    android:textColor="#373737"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See all"
+                    android:visibility="invisible"
+
+                    android:id="@+id/t2"
+                    android:textColor="#a5a5a5"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/recyclerView1"
+                    android:clipToPadding="false"
+                    android:paddingLeft="10.3dp"
+                    android:paddingTop="5.7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="0dp"
+                    android:divider="#fff"
+                    app:shimmer_demo_duration="1000"
+                    app:shimmer_demo_child_count="10"
+                    app:shimmer_demo_layout="@layout/recyclerview_items"
+                    app:shimmer_demo_layout_manager_type="linear_horizontal"
+                    app:shimmer_demo_angle="20"
+                    android:scrollbars="none"  />
+            </LinearLayout>
+
+
+
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+android:orientation="horizontal"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="12.3dp"
+    android:weightSum="2"
+    >
+    <TextView
+        android:layout_weight="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="19.3sp"
+
+        android:textColor="#373737"
+        android:text="VEC-code Scoreboard"/>
+    <Spinner
+        android:id="@+id/spinnervec"
+        android:layout_width="match_parent"
+        android:layout_weight="1.2"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/recyclerView3"
+                android:layout_gravity="center"
+                android:layout_marginTop="10.7dp"
+                android:background="@drawable/rect_blueoutline"
+                android:padding="4dp"
+                android:layout_marginBottom="14.3dp"
+                android:layout_width="match_parent"
+                android:clipToPadding="false"
+                android:paddingLeft="15.7dp"
+                android:paddingRight="15.3dp"
+                android:layout_height="258.3dp"
+                app:shimmer_demo_duration="1000"
+                android:dividerHeight="0dp"
+                android:divider="#fff"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/score_vec"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                app:shimmer_demo_angle="20"
+                android:scrollbars="none"
+                />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12.3dp"
+                android:layout_marginTop="20.7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text="Development Essentials "
+
+                    android:layout_height="wrap_content"
+                    android:textSize="19.3sp"
+                    android:textColor="#373737"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See all"
+                    android:visibility="invisible"
+                    android:id="@+id/t3"
+                    android:textColor="#a5a5a5"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/recyclerView2"
+                    android:clipToPadding="false"
+                    android:paddingLeft="10.3dp"
+                    android:paddingTop="5.7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="0dp"
+                    android:divider="#fff"
+                    app:shimmer_demo_duration="1000"
+                    app:shimmer_demo_child_count="10"
+                    app:shimmer_demo_layout="@layout/recyclerview_items"
+                    app:shimmer_demo_layout_manager_type="linear_horizontal"
+                    app:shimmer_demo_angle="20"
+                    android:scrollbars="none"
+                    />
+
+            </LinearLayout>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="209dp"
+                android:elevation="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:background="@drawable/whitebadge"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                ></androidx.viewpager.widget.ViewPager>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</LinearLayout>

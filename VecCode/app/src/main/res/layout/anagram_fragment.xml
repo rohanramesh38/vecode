@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".design.Game.AnagramFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:id="@+id/linanag"
+    android:layout_width="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:text=""
+        android:id="@+id/textdisp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#515151"
+        android:background="@drawable/whitebadge"/>
+    
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/recAnaAns"
+        android:clipToPadding="false"
+        android:paddingLeft="10.3dp"
+        android:paddingTop="10.7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_demo_duration="1000"
+        android:dividerHeight="0dp"
+        android:divider="#fff"
+        app:shimmer_demo_child_count="1"
+        app:shimmer_demo_layout="@layout/anagram_box_layout"
+        app:shimmer_demo_layout_manager_type="linear_horizontal"
+        app:shimmer_demo_angle="20"
+        android:scrollbars="none" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#3b3b3b"/>
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:orientation="horizontal"
+        android:clipToPadding="false"
+        android:paddingLeft="10.3dp"
+        android:paddingTop="10.7dp"
+        android:id="@+id/recAnaQues"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:shimmer_demo_duration="1000"
+        android:dividerHeight="0dp"
+        android:divider="#fff"
+        app:shimmer_demo_child_count="5"
+        app:shimmer_demo_layout="@layout/anagram_box_layout"
+        app:shimmer_demo_layout_manager_type="linear_horizontal"
+        app:shimmer_demo_angle="20"
+        android:scrollbars="none" />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linanag"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btskip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_blue"
+            android:text="Skip"
+            android:textColor="#fff" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_blue"
+android:id="@+id/btreset"
+            android:text="RESET"
+            android:textColor="#fff" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btcheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_blue"
+
+            android:text="check"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</FrameLayout>
