@@ -73,7 +73,7 @@ public class AnagramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             if(model!=null)
             {
 
-            Toast.makeText(mContext, "bhai"+model, Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(mContext, "bhai"+model, Toast.LENGTH_SHORT).show();
             //    System.out.println(model.getTitle()+" "+model.getPic()+" "+model.getPrice());
             // Picasso.get().load(model.getImage()).networkPolicy(NetworkPolicy.OFFLINE).centerCrop().into( genericViewHolder.imgUser);
 

@@ -2,6 +2,7 @@ package com.example.veccode.design.ui.home;
 
 import android.app.ActionBar;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -64,6 +65,7 @@ import static androidx.recyclerview.widget.LinearLayoutManager.*;
 
 public class HomeFragment extends Fragment {
 
+    private static final int SPLASH_TIME_OUT =3000 ;
     private HomeViewModel homeViewModel;
     ImageView draw;
 
@@ -127,7 +129,7 @@ public class HomeFragment extends Fragment {
             aspvec.add(""+(mYear-3));
 
 
-        String s[]={
+     /*   String s[]={
                 "auto",
                 "else",
                 "long",
@@ -342,7 +344,7 @@ public class HomeFragment extends Fragment {
                 "email",
                 "DOS"
         };
-
+*/
 
       /*  for(int i=0;i<s.length;i++)
         {
@@ -375,7 +377,7 @@ public class HomeFragment extends Fragment {
 spvec.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(getActivity(), ""+aspvec.get(position), Toast.LENGTH_SHORT).show();
+     //   Toast.makeText(getActivity(), ""+aspvec.get(position), Toast.LENGTH_SHORT).show();
 
         FirebaseDatabase.getInstance().getReference().child("ScoreBoardVec").child(aspvec.get(position)).addValueEventListener(new ValueEventListener() {
             @Override
@@ -443,6 +445,32 @@ spvec.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
         myCustomPagerAdapter = new MyCustomPagerAdapter(getContext(), models,getActivity());
         viewPager.setAdapter(myCustomPagerAdapter);
         indicator.setupWithViewPager(viewPager, true);
+
+
+
+        new Handler().postDelayed(new Runnable() {
+
+
+            @Override
+            public void run() {
+
+                if(images!=null)
+                {
+
+                    if (viewPager.getCurrentItem() < images.size() -1) {
+                        viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+                    }
+                    else
+                    {
+                        viewPager.setCurrentItem(0);
+                    }
+
+                }            }
+        }, SPLASH_TIME_OUT);
+
+
+
+
 
 
       //
@@ -680,18 +708,7 @@ for(int i=0;i<s.length;i++)
                     @Override
                     public void run() {
 
-                        if(images!=null)
-                        {
 
-                            if (viewPager.getCurrentItem() < images.size() -1) {
-                            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-                            }
-                            else
-                                {
-                            viewPager.setCurrentItem(0);
-                            }
-
-                        }
                     }
                 });
             }catch (NullPointerException e)

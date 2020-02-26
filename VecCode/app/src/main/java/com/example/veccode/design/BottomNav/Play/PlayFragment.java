@@ -56,6 +56,10 @@ public class PlayFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                //action_playFragment_to_sequenceFragment
+                NavController navController= Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
+                navController.navigate(R.id.action_playFragment_to_sequenceFragment);
+
             }
         });
 

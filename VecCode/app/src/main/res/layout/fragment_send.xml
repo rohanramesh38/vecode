@@ -122,10 +122,11 @@ companies"
 
         </LinearLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:layout_gravity="center"
             android:layout_width="100dp"
             android:padding="8dp"
+            android:src="@drawable/log"
 
 
             android:layout_height="100dp"/>
@@ -136,15 +137,18 @@ companies"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginBottom="30dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:elevation="5dp"
         android:background="@drawable/whitebadge"
         >
-        <de.hdodenhof.circleimageview.CircleImageView
+
+        <ImageView
             android:layout_width="100dp"
+            android:layout_height="100dp"
             android:padding="8dp"
-            android:layout_height="100dp"/>
+            android:src="@drawable/com" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -167,7 +171,7 @@ companies"
                 android:padding="4dp"
                 android:textSize="13dp"
                 android:layout_width="match_parent"
-                android:text="bla bla"
+                android:text="Initiation  by coders club "
 
                 android:layout_height="wrap_content"/>
 

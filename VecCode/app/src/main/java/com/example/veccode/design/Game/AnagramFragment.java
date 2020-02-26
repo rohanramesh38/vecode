@@ -3,6 +3,7 @@ package com.example.veccode.design.Game;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import com.example.veccode.Adapter.AnagramAdapter;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -25,9 +27,13 @@ import android.widget.Toast;
 
 import com.cooltechworks.views.shimmer.ShimmerRecyclerView;
 import com.example.veccode.Adapter.AnagramAdapter;
+import com.example.veccode.Login.LoginActivity;
+import com.example.veccode.MainActivity;
 import com.example.veccode.R;
 import com.example.veccode.design.MainWorkActivity;
 import com.example.veccode.utils.gameModel;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -45,9 +51,12 @@ import static androidx.recyclerview.widget.LinearLayoutManager.VERTICAL;
 public class AnagramFragment extends Fragment {
 
     private AnagramViewModel mViewModel;
+
+   private TextView thint;
     private Button btcheck,btreset,btskip;
 
-    String ques="life",ans="FILE";
+    String ques="life",ans="FILE",hint="";
+    private static int SPLASH_TIME_OUT = 2000;
 
 
   private  View root;
@@ -113,6 +122,8 @@ listAllQues.clear();
 
                 ques=listAllQues.get(index).getQues().trim().toUpperCase();
                 ans=listAllQues.get(index).getAns().trim().toUpperCase();
+                hint=listAllQues.get(index).getExpl().trim();
+
                 reset(root);
 
             }
@@ -138,6 +149,9 @@ listAllQues.clear();
         btcheck=root.findViewById(R.id.btcheck);
         btreset=root.findViewById(R.id.btreset);
         btskip=root.findViewById(R.id.btskip);
+        thint=root.findViewById(R.id.hint);
+
+
 
         btreset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,6 +168,7 @@ listAllQues.clear();
 
                 ques=listAllQues.get(index).getQues().trim().toUpperCase();
                 ans=listAllQues.get(index).getAns().trim().toUpperCase();
+                hint=listAllQues.get(index).getExpl().trim();
                 reset(root);
             }
         });
@@ -172,6 +187,25 @@ listAllQues.clear();
                 //System.out.println(s.equals(ans));
                 if(s.equals(ans)){
                     anagramAdapterAns.updateList(ansAlpha,2);
+                    int index=getNext();
+
+                    ques=listAllQues.get(index).getQues().trim().toUpperCase();
+                    ans=listAllQues.get(index).getAns().trim().toUpperCase();
+                    hint=listAllQues.get(index).getExpl().trim();
+
+
+                   // reset(root);
+
+                    //CodeProcessor.init(this);
+                    new Handler().postDelayed(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            reset(root);
+                        }
+                    }, SPLASH_TIME_OUT);
+
+
                 }
                 else{
                     anagramAdapter.updateList(allAlpha,0);
@@ -224,6 +258,8 @@ listAllQues.clear();
         List<String> l=new ArrayList<String>();
         allAlpha.addAll(Arrays.asList(s));
         allAlpha.remove(0);
+
+        thint.setText(hint);
 
         anagramAdapter=new AnagramAdapter(getContext(),allAlpha,0);
         recyclerViewAnaQues.setAdapter(anagramAdapter);

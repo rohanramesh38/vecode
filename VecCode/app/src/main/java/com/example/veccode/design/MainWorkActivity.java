@@ -109,7 +109,7 @@ public class MainWorkActivity extends AppCompatActivity {
 
                 {
                //     FirebaseAuth.getInstance().signOut();
-                    Toast.makeText(MainWorkActivity.this, "hchs", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(MainWorkActivity.this, "hchs", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -165,12 +165,18 @@ navController.addOnDestinationChangedListener(new NavController.OnDestinationCha
 
                 bottomNavigationView.setVisibility(View.GONE);
 
+            } else if(destination.getId()==R.id.sequenceFragment)
+            {
+
+                bottomNavigationView.setVisibility(View.GONE);
+
             }
             else
             {
                 MainWorkActivity.this.getSupportActionBar().show();
                 bottomNavigationView.setVisibility(View.VISIBLE);
             }
+
 
 
 
@@ -221,7 +227,7 @@ if(p!=null) {
     Sbatch = p.getBatch();
     Sdept = p.getDept();
     Smedal = p.getMedal();
-    Toast.makeText(MainWorkActivity.this, Smedal, Toast.LENGTH_SHORT).show();
+   // Toast.makeText(MainWorkActivity.this, Smedal, Toast.LENGTH_SHORT).show();
     setdata();
 }    }
 

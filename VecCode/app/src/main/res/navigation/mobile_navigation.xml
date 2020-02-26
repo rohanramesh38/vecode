@@ -50,11 +50,7 @@
         android:id="@+id/nav_profile"
         android:name="com.example.veccode.design.ui.profile.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_nav_profile_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/nav_mcq"
@@ -70,92 +66,60 @@
         android:id="@+id/nav_bookmark"
         android:name="com.example.veccode.design.ui.bookmark.BookMarkFragment"
         android:label="Bookmark"
-        tools:layout="@layout/fragment_bookmark" >
-        <action
-            android:id="@+id/action_nav_bookmark_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_bookmark" />
 
     <fragment
         android:id="@+id/nav_share"
         android:name="com.example.veccode.design.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" >
-        <action
-            android:id="@+id/action_nav_share_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        android:label="Info"
+        tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
         android:name="com.example.veccode.design.ui.send.SendFragment"
         android:label="About us"
-        tools:layout="@layout/fragment_send" >
-        <action
-            android:id="@+id/action_nav_send_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_send" />
     <fragment
         android:id="@+id/webFragment"
         android:name="com.example.veccode.design.WebFragment"
         android:label="fragment_web"
-        tools:layout="@layout/fragment_web" >
-        <action
-            android:id="@+id/action_webFragment_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_web" />
     <fragment
         android:id="@+id/mainMcqFragment"
         android:name="com.example.veccode.design.Mcq.MainMcqFragment"
         android:label="Mcq"
-        tools:layout="@layout/main_mcq_fragment" >
-        <action
-            android:id="@+id/action_mainMcqFragment_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        tools:layout="@layout/main_mcq_fragment" />
 
     <fragment
         android:id="@+id/nav_codezone"
         android:name="com.example.veccode.design.BottomNav.codezone.CodeZoneFragment"
-        android:label="Code-Fun"
-        tools:layout="@layout/fragment_code_zone" >
-        <action
-            android:id="@+id/action_nav_codezone_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        android:label="Fun Zone"
+        tools:layout="@layout/fragment_code_zone" />
     <fragment
         android:id="@+id/adExplainFragment"
         android:name="com.example.veccode.design.AdExplainFragment"
         android:label="fragment_ad_explain"
-        tools:layout="@layout/fragment_ad_explain" >
-        <action
-            android:id="@+id/action_adExplainFragment_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_ad_explain" />
     <fragment
         android:id="@+id/playFragment"
         android:name="com.example.veccode.design.BottomNav.Play.PlayFragment"
-        android:label="play_fragment"
+        android:label="Game Zone"
         tools:layout="@layout/play_fragment" >
         <action
             android:id="@+id/action_playFragment_to_anagramFragment"
             app:destination="@id/anagramFragment" />
         <action
-            android:id="@+id/action_playFragment_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
+            android:id="@+id/action_playFragment_to_sequenceFragment"
+            app:destination="@id/sequenceFragment" />
     </fragment>
     <fragment
         android:id="@+id/anagramFragment"
         android:name="com.example.veccode.design.Game.AnagramFragment"
-        android:label="anagram_fragment"
-        tools:layout="@layout/anagram_fragment" >
-        <action
-            android:id="@+id/action_anagramFragment_to_noInternetFragment"
-            app:destination="@id/noInternetFragment" />
-    </fragment>
+        android:label="anagram"
+        tools:layout="@layout/anagram_fragment" />
     <fragment
-        android:id="@+id/noInternetFragment"
-        android:name="com.example.veccode.design.NoInternetFragment"
-        android:label="fragment_no_internet"
-        tools:layout="@layout/fragment_no_internet" />
+        android:id="@+id/sequenceFragment"
+        android:name="com.example.veccode.design.BottomNav.Play.SequenceFragment"
+        android:label="Sequence"
+        tools:layout="@layout/fragment_sequence" />
 </navigation>
